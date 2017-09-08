@@ -4,9 +4,9 @@ var _numeral = require("numeral");
 
 var _numeral2 = _interopRequireDefault(_numeral);
 
-var _translator = require("../utils/translator");
+var _simpleTranslator = require("simple-translator");
 
-var _translator2 = _interopRequireDefault(_translator);
+var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
 
 var _number = require("./number");
 
@@ -32,11 +32,11 @@ var RgbFormatter = {
         formatted = value || "";
         if (options.required && valid) {
           valid = false;
-          errors.push(_translator2.default.translate("Citadel.utils.formatters.required"));
+          errors.push(_simpleTranslator2.default.translate("FormFormatters.required"));
         }
       } else if (parsed > 255 || parsed < 0) {
         valid = false;
-        errors.push(_translator2.default.translate("Citadel.utils.formatters.rgbInvalid"));
+        errors.push(_simpleTranslator2.default.translate("FormFormatters.rgbInvalid"));
       }
     }
 

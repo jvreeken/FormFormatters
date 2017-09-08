@@ -1,16 +1,16 @@
 "use strict";
 
+var _helper = require("../utils/helper");
+
+var _helper2 = _interopRequireDefault(_helper);
+
 var _moment = require("moment");
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _lodash = require("lodash");
+var _simpleTranslator = require("simple-translator");
 
-var _lodash2 = _interopRequireDefault(_lodash);
-
-var _translator = require("../utils/translator");
-
-var _translator2 = _interopRequireDefault(_translator);
+var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
 
 var _string = require("./string");
 
@@ -25,7 +25,9 @@ var DateFormatter = {
   format: function format(value) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    options = _lodash2.default.merge({}, { format: "full-date" }, options);
+    if (_helper2.default.isNil(options["format"])) {
+      options["format"] = "full-date";
+    }
 
     var _StrFormatter$format = _string2.default.format(value, options),
         valid = _StrFormatter$format.valid,
@@ -48,7 +50,7 @@ var DateFormatter = {
         }
       } else {
         valid = false;
-        errors.push(_translator2.default.translate("Citadel.utils.formatters.dateInvalid"));
+        errors.push(_simpleTranslator2.default.translate("FormFormatters.dateInvalid"));
       }
     }
 
