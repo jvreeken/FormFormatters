@@ -1,5 +1,5 @@
 import numeral from "numeral";
-import Translator from "../utils/translator";
+import Translator from "simple-translator";
 import NumberFormatter from "./number";
 
 const RgbFormatter = {

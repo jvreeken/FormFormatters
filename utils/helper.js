@@ -8,11 +8,7 @@ module.exports = {
   isEmpty(value) {
     if(this.isNil(value)) { return(true); }
 
-    return(
-      (this.isString(value) && value.length === 0)
-      || (this.isArray(value) && value.length === 0)
-      || (this.isObject(value) && Object.keys(value).length === 0)
-    );
+    return((this.isString(value) && value.length === 0) || (this.isArray(value) && value.length === 0) || (this.isObject(value) && Object.keys(value).length === 0));
   },
 
   isNil(value) {
@@ -36,4 +32,4 @@ module.exports = {
 
     return(typeof(value) === "string");
   }
-}
+};

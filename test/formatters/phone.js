@@ -1,9 +1,9 @@
 import test from "ava";
-import formatter from "../../app/formatters/phone";
+import formatter from "../../formatters/phone";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {
-    errors: ["Citadel.utils.formatters.required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -12,7 +12,7 @@ test("converts null", t => {
 
 test("returns an error if required", t => {
   t.deepEqual(formatter.format("", {required: true}), {
-    errors: ["Citadel.utils.formatters.required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -30,7 +30,7 @@ test("does not return an error if not required", t => {
 
 test("converts number", t => {
   t.deepEqual(formatter.format(23), {
-    errors: ["Citadel.utils.formatters.phoneInvalid"],
+    errors: ["FormFormatters.phoneInvalid"],
     formatted: 23,
     parsed: 23,
     valid: false
@@ -57,7 +57,7 @@ test("formats strings", t => {
 
 test("handles errors", t => {
   t.deepEqual(formatter.format("111222333"), {
-    errors: ["Citadel.utils.formatters.phoneInvalid"],
+    errors: ["FormFormatters.phoneInvalid"],
     formatted: "111222333",
     parsed: "111222333",
     valid: false

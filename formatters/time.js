@@ -1,6 +1,6 @@
-import moment from "moment";
-import Translator from "../utils/translator";
+import Moment from "moment";
 import StrFormatter from "./string";
+import Translator from "simple-translator";
 
 const TimeFormatter = {
   timeFormat: "h:mm a",
@@ -9,7 +9,7 @@ const TimeFormatter = {
     let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
-      let temp = moment(parsed, "hh:mm:ss a");
+      let temp = Moment(parsed, "hh:mm:ss a");
       if(temp.isValid()) {
         formatted = temp.format(this.timeFormat);
         parsed = formatted;

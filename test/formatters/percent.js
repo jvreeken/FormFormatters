@@ -1,9 +1,9 @@
 import test from "ava";
-import formatter from "../../app/formatters/percent";
+import formatter from "../../formatters/percent";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {
-    errors: ["Citadel.utils.formatters.required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -12,7 +12,7 @@ test("converts null", t => {
 
 test("returns an error if required", t => {
   t.deepEqual(formatter.format("", {required: true}), {
-    errors: ["Citadel.utils.formatters.required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -66,7 +66,7 @@ test("formats strings", t => {
 
 test("handles errors", t => {
   t.deepEqual(formatter.format("asdf"), {
-    errors: ["Citadel.utils.formatters.required"],
+    errors: ["FormFormatters.required"],
     formatted: "asdf",
     parsed: "asdf",
     valid: false

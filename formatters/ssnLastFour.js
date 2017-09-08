@@ -1,5 +1,5 @@
-import Translator from "../utils/translator";
 import StringFormatter from "./string";
+import Translator from "simple-translator";
 
 const SSNLastFourFormatter = {
   format(value, options = {}) {
