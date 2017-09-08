@@ -1,6 +1,6 @@
 import _ from "lodash";
 import numeral from "numeral";
-import Translator from "../utils/translator";
+import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const PercentFormatter = {

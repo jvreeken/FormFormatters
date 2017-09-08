@@ -1,4 +1,4 @@
-import Translator from "../utils/translator";
+import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const PhoneFormatter = {

@@ -1,5 +1,5 @@
-import Translator from "../utils/translator";
 import StrFormatter from "./string";
+import Translator from "simple-translator";
 
 const SSNFormatter = {
   format(value, options = {}) {
