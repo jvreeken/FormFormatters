@@ -1,5 +1,5 @@
 import test from "ava";
-import formatter from "../../formatters/time";
+import formatter from "../../src/formatters/time";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {

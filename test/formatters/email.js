@@ -1,5 +1,5 @@
+import formatter from "../../src/formatters/email";
 import test from "ava";
-import formatter from "../../formatters/email";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {

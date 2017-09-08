@@ -1,4 +1,4 @@
-import formatter from "../../formatters/date";
+import formatter from "../../src/formatters/date";
 import Translator from "simple-translator"; 
 import test from "ava";
 

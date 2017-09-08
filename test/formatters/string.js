@@ -1,5 +1,5 @@
 import test from "ava";
-import formatter from "../../formatters/string";
+import formatter from "../../src/formatters/string";
 
 test("converts number", t => {
   t.deepEqual(formatter.format(23), {

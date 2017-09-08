@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js formatters masks utils",
-    "build": "babel index.js formatters masks utils --out-dir dist",
+    "build": "babel src --out-dir dist",
     "test": "ava"
   },
   "dependencies": {

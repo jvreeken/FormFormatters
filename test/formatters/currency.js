@@ -1,4 +1,4 @@
-import formatter from "../../formatters/currency";
+import formatter from "../../src/formatters/currency";
 import Translator from "simple-translator"; 
 import test from "ava";
 
