@@ -1,20 +1,18 @@
 "use strict";
 
-var _helper = require("../utils/helper");
-
-var _helper2 = _interopRequireDefault(_helper);
-
 var _moment = require("moment");
 
 var _moment2 = _interopRequireDefault(_moment);
+
+var _string = require("./string");
+
+var _string2 = _interopRequireDefault(_string);
 
 var _simpleTranslator = require("simple-translator");
 
 var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
 
-var _string = require("./string");
-
-var _string2 = _interopRequireDefault(_string);
+var _lodash = require("lodash");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -25,7 +23,7 @@ var DateFormatter = {
   format: function format(value) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    if (_helper2.default.isNil(options["format"])) {
+    if ((0, _lodash.isNil)(options["format"])) {
       options["format"] = "full-date";
     }
 

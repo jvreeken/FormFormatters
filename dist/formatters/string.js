@@ -1,8 +1,6 @@
 "use strict";
 
-var _helper = require("../utils/helper");
-
-var _helper2 = _interopRequireDefault(_helper);
+var _lodash = require("lodash");
 
 var _simpleTranslator = require("simple-translator");
 
@@ -14,21 +12,21 @@ var StringFormatter = {
   format: function format(value) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    if (_helper2.default.isNil(options["required"])) {
+    if ((0, _lodash.isNil)(options["required"])) {
       options["required"] = false;
     }
     var errors = [];
 
-    if (_helper2.default.isNumber(value)) {
+    if ((0, _lodash.isNumber)(value)) {
       value = value.toString();
     }
-    if (_helper2.default.isEmpty(value)) {
+    if ((0, _lodash.isEmpty)(value)) {
       value = "";
     }
 
-    var formatted = _helper2.default.isNil(value) ? "" : value.toString().trim();
+    var formatted = (0, _lodash.isNil)(value) ? "" : value.toString().trim();
     var parsed = formatted;
-    if (options.required && _helper2.default.isEmpty(parsed)) {
+    if (options.required && (0, _lodash.isEmpty)(parsed)) {
       errors.push(_simpleTranslator2.default.translate("FormFormatters.required"));
     }
 

@@ -1,8 +1,6 @@
 "use strict";
 
-var _helper = require("../utils/helper");
-
-var _helper2 = _interopRequireDefault(_helper);
+var _lodash = require("lodash");
 
 var _numeral = require("numeral");
 
@@ -22,7 +20,7 @@ var CurrencyFormatter = {
   format: function format(value) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    if (_helper2.default.isNil(options["format"])) {
+    if ((0, _lodash.isNil)(options["format"])) {
       options["format"] = "cents";
     }
 
