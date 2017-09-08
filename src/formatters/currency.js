@@ -1,17 +1,17 @@
-import Helper from "../utils/helper";
-import numeral from "numeral";
+import { isNil } from "lodash";
+import Numeral from "numeral";
 import Translator from "simple-translator";
 import NumberFormatter from "./number";
 
 const CurrencyFormatter = {
   format(value, options = {}) {
-    if(Helper.isNil(options["format"])) {
+    if(isNil(options["format"])) {
       options["format"] = "cents";
     }
     let{valid, parsed, formatted, errors} = NumberFormatter.format(value, options);
 
     if(valid && parsed !== "") {
-      let numObj = numeral(parsed);
+      let numObj = Numeral(parsed);
       parsed = numObj.value();
       if(typeof(parsed) === "undefined" || parsed === null) {
         parsed = value || "";

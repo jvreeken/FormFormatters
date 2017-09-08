@@ -1,23 +1,23 @@
-import Helper from "../utils/helper";
+import { isEmpty, isNil, isNumber } from "lodash";
 import Translator from "simple-translator";
 
 const StringFormatter = {
   format(value, options = {}) {
-    if(Helper.isNil(options["required"])) {
+    if(isNil(options["required"])) {
       options["required"] = false;
     }
     let errors = [];
 
-    if(Helper.isNumber(value)) {
+    if(isNumber(value)) {
       value = value.toString();
     }
-    if(Helper.isEmpty(value)) {
+    if(isEmpty(value)) {
       value = "";
     }
 
-    let formatted = Helper.isNil(value) ? "" : value.toString().trim();
+    let formatted = isNil(value) ? "" : value.toString().trim();
     let parsed = formatted;
-    if(options.required && Helper.isEmpty(parsed)) {
+    if(options.required && isEmpty(parsed)) {
       errors.push(Translator.translate("FormFormatters.required"));
     }
 

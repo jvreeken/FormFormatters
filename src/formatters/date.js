@@ -1,14 +1,14 @@
-import Helper from "../utils/helper";
 import Moment from "moment";
-import Translator from "simple-translator";
 import StrFormatter from "./string";
+import Translator from "simple-translator";
+import { isNil } from "lodash";
 
 const DateFormatter = {
   monthYearFormat: "MMM YYYY",
   monthDayYearFormat: "MMM D, YYYY",
 
   format(value, options = {}) {
-    if(Helper.isNil(options["format"])) {
+    if(isNil(options["format"])) {
       options["format"] = "full-date";
     }
     let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
