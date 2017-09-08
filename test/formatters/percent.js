@@ -1,5 +1,5 @@
 import test from "ava";
-import formatter from "../../formatters/percent";
+import formatter from "../../src/formatters/percent";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {

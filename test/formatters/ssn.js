@@ -1,5 +1,5 @@
 import test from "ava";
-import formatter from "../../formatters/ssn";
+import formatter from "../../src/formatters/ssn";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {

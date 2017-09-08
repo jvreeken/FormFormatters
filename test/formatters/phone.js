@@ -1,5 +1,5 @@
 import test from "ava";
-import formatter from "../../formatters/phone";
+import formatter from "../../src/formatters/phone";
 
 test("converts null", t => {
   t.deepEqual(formatter.format(null, {required: true}), {
