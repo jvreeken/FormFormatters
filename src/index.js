@@ -8,6 +8,7 @@ module.exports = {
   EnglishTranslation: require("./utils/translations/en"),
   HexFormatter: require("./formatters/hex"),
   HexMask: require("./masks/hex"),
+  NameFormatter: require("./formatters/name"),
   NumberFormatter: require("./formatters/number"),
   PercentFormatter: require("./formatters/percent"),
   PercentMask: require("./masks/percent"),
