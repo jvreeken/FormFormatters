@@ -1,4 +1,3 @@
-import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const NameFormatter = {
