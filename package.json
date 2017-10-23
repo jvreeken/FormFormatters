@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint index.js formatters masks utils",
+    "lint": "eslint src",
     "build": "babel src --out-dir dist",
     "test": "ava"
   },
