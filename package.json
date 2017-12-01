@@ -18,7 +18,7 @@
     "lodash": "4.17.4",
     "moment": "2.17.1",
     "numeral": "2.0.6",
-    "simple-translator": "0.0.2"
+    "simple-translator": "0.0.3"
   },
   "devDependencies": {
     "ava": "0.18.2",
