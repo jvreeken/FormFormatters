@@ -1,6 +1,6 @@
 {
   "name": "form-formatters",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "private": false,
   "description": "Formatters and masks for validating and manipulating user input.",
   "author": "AlchemyAlcove",
