@@ -1,9 +1,5 @@
 "use strict";
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 var _string = require("./string");
 
 var _string2 = _interopRequireDefault(_string);
@@ -27,7 +23,7 @@ var EmailFormatter = {
       var emailRegex = /^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$/;
       valid = emailRegex.test(formatted);
       if (!valid) {
-        errors.push(_simpleTranslator2.default.translate("FormFormatters.emailInvalid"));
+        errors.push("FormFormatters.emailInvalid");
       }
     }
 

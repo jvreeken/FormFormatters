@@ -1,9 +1,5 @@
 "use strict";
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 var _string = require("./string");
 
 var _string2 = _interopRequireDefault(_string);
@@ -30,7 +26,7 @@ var HexFormatter = {
         valid = false;
       }
       if (!valid) {
-        errors.push(_simpleTranslator2.default.translate("FormFormatters.hexInvalid"));
+        errors.push("FormFormatters.hexInvalid");
       }
     }
 

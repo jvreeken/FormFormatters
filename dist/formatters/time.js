@@ -8,10 +8,6 @@ var _string = require("./string");
 
 var _string2 = _interopRequireDefault(_string);
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var TimeFormatter = {
@@ -35,7 +31,7 @@ var TimeFormatter = {
         valid = false;
         formatted = "";
         parsed = "";
-        errors.push(_simpleTranslator2.default.translate("FormFormatters.timeInvalid"));
+        errors.push("FormFormatters.timeInvalid");
       }
     }
 

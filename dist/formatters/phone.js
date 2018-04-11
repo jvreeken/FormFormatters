@@ -1,9 +1,5 @@
 "use strict";
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 var _string = require("./string");
 
 var _string2 = _interopRequireDefault(_string);
@@ -28,7 +24,7 @@ var PhoneFormatter = {
         valid = false;
         parsed = value;
         formatted = value;
-        errors.push(_simpleTranslator2.default.translate("FormFormatters.phoneInvalid"));
+        errors.push("FormFormatters.phoneInvalid");
       }
     }
 

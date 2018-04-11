@@ -4,10 +4,6 @@ var _numeral = require("numeral");
 
 var _numeral2 = _interopRequireDefault(_numeral);
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 var _string = require("./string");
 
 var _string2 = _interopRequireDefault(_string);
@@ -31,7 +27,7 @@ var NumberFormatter = {
         formatted = value;
         if (options.required) {
           valid = false;
-          errors.push(_simpleTranslator2.default.translate("FormFormatters.required"));
+          errors.push("FormFormatters.required");
         }
       }
       formatted = parsed.toString();

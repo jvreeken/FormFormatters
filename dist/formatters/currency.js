@@ -6,10 +6,6 @@ var _numeral = require("numeral");
 
 var _numeral2 = _interopRequireDefault(_numeral);
 
-var _simpleTranslator = require("simple-translator");
-
-var _simpleTranslator2 = _interopRequireDefault(_simpleTranslator);
-
 var _number = require("./number");
 
 var _number2 = _interopRequireDefault(_number);
@@ -38,7 +34,7 @@ var CurrencyFormatter = {
         formatted = value || "";
         if (options.required && valid) {
           valid = false;
-          errors.push(_simpleTranslator2.default.translate("FormFormatters.required"));
+          errors.push("FormFormatters.required");
         }
       }
       formatted = numObj.format("$0,0.00");
