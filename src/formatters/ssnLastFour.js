@@ -1,5 +1,4 @@
 import StringFormatter from "./string";
-import Translator from "simple-translator";
 
 const SSNLastFourFormatter = {
   format(value, options = {}) {
@@ -12,7 +11,7 @@ const SSNLastFourFormatter = {
       if(parsed.length !== 4) {
         valid = false;
         errors.push();
-        errors.push(Translator.translate("FormFormatters.last4Invalid"));
+        errors.push("FormFormatters.last4Invalid");
       }
     }
 

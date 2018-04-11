@@ -1,6 +1,5 @@
 import { isNil } from "lodash";
 import Numeral from "numeral";
-import Translator from "simple-translator";
 import NumberFormatter from "./number";
 
 const CurrencyFormatter = {
@@ -18,7 +17,7 @@ const CurrencyFormatter = {
         formatted = value || "";
         if(options.required && valid) {
           valid = false;
-          errors.push(Translator.translate("FormFormatters.required"));
+          errors.push("FormFormatters.required");
         }
       }
       formatted = numObj.format("$0,0.00");

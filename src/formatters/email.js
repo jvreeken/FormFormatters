@@ -1,4 +1,3 @@
-import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const EmailFormatter = {
@@ -12,7 +11,7 @@ const EmailFormatter = {
       let emailRegex = /^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\.[A-Za-z]+$/;
       valid = emailRegex.test(formatted);
       if(!valid) {
-        errors.push(Translator.translate("FormFormatters.emailInvalid"));
+        errors.push("FormFormatters.emailInvalid");
       }
     }
 

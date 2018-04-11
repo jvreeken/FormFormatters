@@ -1,5 +1,4 @@
 import { isEmpty, isNil, isNumber } from "lodash";
-import Translator from "simple-translator";
 
 const StringFormatter = {
   format(value, options = {}) {
@@ -18,7 +17,7 @@ const StringFormatter = {
     let formatted = isNil(value) ? "" : value.toString().trim();
     let parsed = formatted;
     if(options.required && isEmpty(parsed)) {
-      errors.push(Translator.translate("FormFormatters.required"));
+      errors.push("FormFormatters.required");
     }
 
     return({

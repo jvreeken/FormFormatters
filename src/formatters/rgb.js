@@ -1,5 +1,4 @@
 import numeral from "numeral";
-import Translator from "simple-translator";
 import NumberFormatter from "./number";
 
 const RgbFormatter = {
@@ -14,11 +13,11 @@ const RgbFormatter = {
         formatted = value || "";
         if(options.required && valid) {
           valid = false;
-          errors.push(Translator.translate("FormFormatters.required"));
+          errors.push("FormFormatters.required");
         }
       } else if(parsed > 255 || parsed < 0) {
         valid = false;
-        errors.push(Translator.translate("FormFormatters.rgbInvalid"));
+        errors.push("FormFormatters.rgbInvalid");
       }
     }
 

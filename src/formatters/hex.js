@@ -1,4 +1,3 @@
-import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const HexFormatter = {
@@ -15,7 +14,7 @@ const HexFormatter = {
         valid = false;
       }
       if(!valid) {
-        errors.push(Translator.translate("FormFormatters.hexInvalid"));
+        errors.push("FormFormatters.hexInvalid");
       }
     }
 

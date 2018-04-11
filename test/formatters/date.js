@@ -1,19 +1,9 @@
 import formatter from "../../src/formatters/date";
-import Translator from "simple-translator"; 
 import test from "ava";
 
-const English = {
-  FormFormatters: {
-    dateInvalid: "date is invalid",
-    required: "is required"
-  }
-};
-
 test("converts null", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format(null, {required: true}), {
-    errors: ["is required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -21,10 +11,8 @@ test("converts null", t => {
 });
 
 test("returns an error if required", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format("", {required: true}), {
-    errors: ["is required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -104,10 +92,8 @@ test("formats MMM DD YYYY h:mm", t => {
 });
 
 test("does not handle errors", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format("abc"), {
-    errors: ["date is invalid"],
+    errors: ["FormFormatters.dateInvalid"],
     formatted: "",
     parsed: "",
     valid: false
