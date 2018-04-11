@@ -1,4 +1,3 @@
-import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const PhoneFormatter = {
@@ -13,7 +12,7 @@ const PhoneFormatter = {
         valid = false;
         parsed = value;
         formatted = value;
-        errors.push(Translator.translate("FormFormatters.phoneInvalid"));
+        errors.push("FormFormatters.phoneInvalid");
       }
     }
 

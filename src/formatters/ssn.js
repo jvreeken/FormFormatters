@@ -1,5 +1,4 @@
 import StrFormatter from "./string";
-import Translator from "simple-translator";
 
 const SSNFormatter = {
   format(value, options = {}) {
@@ -13,7 +12,7 @@ const SSNFormatter = {
         valid = false;
         parsed = value;
         formatted = value;
-        errors.push(Translator.translate("FormFormatters.ssnInvalid"));
+        errors.push("FormFormatters.ssnInvalid");
       }
     }
 

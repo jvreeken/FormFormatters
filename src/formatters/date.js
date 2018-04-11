@@ -1,6 +1,5 @@
 import Moment from "moment";
 import StrFormatter from "./string";
-import Translator from "simple-translator";
 import { isNil } from "lodash";
 
 const DateFormatter = {
@@ -28,7 +27,7 @@ const DateFormatter = {
         }
       } else {
         valid = false;
-        errors.push(Translator.translate("FormFormatters.dateInvalid"));
+        errors.push("FormFormatters.dateInvalid");
       }
     }
 

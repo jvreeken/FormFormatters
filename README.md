@@ -21,7 +21,7 @@ Entering "abc" into a currency field would result in:
 
 ```json
 {
-  error: ["is required"],
+  error: ["FormFormatters.required"],
   formatted: "abc",
   parsed: "abc",
   valid: false

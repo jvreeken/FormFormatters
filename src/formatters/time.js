@@ -1,6 +1,5 @@
 import Moment from "moment";
 import StrFormatter from "./string";
-import Translator from "simple-translator";
 
 const TimeFormatter = {
   timeFormat: "h:mm a",
@@ -17,7 +16,7 @@ const TimeFormatter = {
         valid = false;
         formatted = "";
         parsed = "";
-        errors.push(Translator.translate("FormFormatters.timeInvalid"));
+        errors.push("FormFormatters.timeInvalid");
       }
     }
 

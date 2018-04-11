@@ -1,5 +1,4 @@
 import numeral from "numeral";
-import Translator from "simple-translator";
 import StrFormatter from "./string";
 
 const NumberFormatter = {
@@ -13,7 +12,7 @@ const NumberFormatter = {
         formatted = value;
         if(options.required) {
           valid = false;
-          errors.push(Translator.translate("FormFormatters.required"));
+          errors.push("FormFormatters.required");
         }
       }
       formatted = parsed.toString();

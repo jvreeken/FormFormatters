@@ -1,18 +1,9 @@
 import formatter from "../../src/formatters/currency";
-import Translator from "simple-translator"; 
 import test from "ava";
 
-const English = {
-  FormFormatters: {
-    required: "is required"
-  }
-};
-
 test("converts null", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format(null, {required: true}), {
-    errors: ["is required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -20,10 +11,8 @@ test("converts null", t => {
 });
 
 test("returns an error if required", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format("", {required: true}), {
-    errors: ["is required"],
+    errors: ["FormFormatters.required"],
     formatted: "",
     parsed: "",
     valid: false
@@ -67,10 +56,8 @@ test("formats dollars", t => {
 });
 
 test("(doesn't) handle errors", t => {
-  Translator.registerDefaultLanguage("en", English);
-
   t.deepEqual(formatter.format("abc", {required: true}), {
-    errors: ["is required"],
+    errors: ["FormFormatters.required"],
     formatted: "abc",
     parsed: "abc",
     valid: false
