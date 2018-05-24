@@ -1,9 +1,9 @@
 import numeral from "numeral";
-import StrFormatter from "./string";
+import StringFormatter from "./string";
 
 const NumberFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
       parsed = numeral(parsed.replace(/[$\s,]/g, "").trim()).value();

@@ -1,11 +1,11 @@
 import Moment from "moment";
-import StrFormatter from "./string";
+import StringFormatter from "./string";
 
 const TimeFormatter = {
   timeFormat: "h:mm a",
 
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
       let temp = Moment(parsed, "hh:mm:ss a");

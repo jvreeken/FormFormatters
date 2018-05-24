@@ -1,5 +1,5 @@
 import Moment from "moment";
-import StrFormatter from "./string";
+import StringFormatter from "./string";
 import { isNil } from "lodash";
 
 const DateFormatter = {
@@ -10,7 +10,7 @@ const DateFormatter = {
     if(isNil(options["format"])) {
       options["format"] = "full-date";
     }
-    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
       let temp = this.parseDate(parsed);

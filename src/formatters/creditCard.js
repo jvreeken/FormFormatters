@@ -1,8 +1,8 @@
-import StrFormatter from "./string";
+import StringFormatter from "./string";
 
 const CreditCardFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
       // remove all non-digits

@@ -1,8 +1,8 @@
-import StrFormatter from "./string";
+import StringFormatter from "./string";
 
 const NameFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
 
     parsed = parsed.toLowerCase();
     formatted = formatted.toLowerCase();

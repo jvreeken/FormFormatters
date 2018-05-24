@@ -10,11 +10,11 @@ var SSNFormatter = {
   format: function format(value) {
     var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    var _StrFormatter$format = _string2.default.format(value, options),
-        valid = _StrFormatter$format.valid,
-        parsed = _StrFormatter$format.parsed,
-        formatted = _StrFormatter$format.formatted,
-        errors = _StrFormatter$format.errors;
+    var _StringFormatter$form = _string2.default.format(value, options),
+        valid = _StringFormatter$form.valid,
+        parsed = _StringFormatter$form.parsed,
+        formatted = _StringFormatter$form.formatted,
+        errors = _StringFormatter$form.errors;
 
     if (valid && parsed.length > 0) {
       // remove all non-digits

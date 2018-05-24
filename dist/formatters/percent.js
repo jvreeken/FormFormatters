@@ -18,11 +18,11 @@ var PercentFormatter = {
 
     options = (0, _lodash.merge)({}, { format: "decimal" }, options);
 
-    var _StrFormatter$format = _string2.default.format(value, options),
-        valid = _StrFormatter$format.valid,
-        parsed = _StrFormatter$format.parsed,
-        formatted = _StrFormatter$format.formatted,
-        errors = _StrFormatter$format.errors;
+    var _StringFormatter$form = _string2.default.format(value, options),
+        valid = _StringFormatter$form.valid,
+        parsed = _StringFormatter$form.parsed,
+        formatted = _StringFormatter$form.formatted,
+        errors = _StringFormatter$form.errors;
 
     if (!(0, _lodash.isEmpty)(parsed)) {
       var numObj = (0, _numeral2.default)((0, _lodash.trim)(parsed.replace(/[$\s,%]/g, "")));
