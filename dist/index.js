@@ -3,6 +3,8 @@
 module.exports = {
   CurrencyFormatter: require("./formatters/currency"),
   CurrencyMask: require("./masks/currency"),
+  CreditCardFormatter: require("./formatters/creditCard"),
+  CreditCardMask: require("./masks/creditCard"),
   DecimalMask: require("./masks/decimal"),
   DateFormatter: require("./formatters/date"),
   EmailFormatter: require("./formatters/email"),
