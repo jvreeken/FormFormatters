@@ -38,10 +38,10 @@ test("converts number", t => {
 });
 
 test("trims white space", t => {
-  t.deepEqual(formatter.format(" 123456789 "), {
+  t.deepEqual(formatter.format(" 1234 5678 9012 3456 "), {
     errors: [],
-    formatted: "123-45-6789",
-    parsed: "123456789",
+    formatted: "1234-5678-9012-3456",
+    parsed: "1234567890123456",
     valid: true
   });
 });
