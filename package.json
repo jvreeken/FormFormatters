@@ -1,12 +1,12 @@
 {
   "name": "form-formatters",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "private": false,
   "description": "Formatters and masks for validating and manipulating user input.",
   "author": "AlchemyAlcove",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jvreeken/FormFormatters"
+    "url": "https://github.com/AlchemyAlcove/FormFormatters"
   },
   "main": "dist/index.js",
   "scripts": {

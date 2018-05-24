@@ -40,7 +40,7 @@ test("converts number", t => {
 test("trims white space", t => {
   t.deepEqual(formatter.format(" 1234 5678 9012 3456 "), {
     errors: [],
-    formatted: "1234-5678-9012-3456",
+    formatted: "1234 5678 9012 3456",
     parsed: "1234567890123456",
     valid: true
   });
@@ -49,7 +49,7 @@ test("trims white space", t => {
 test("formats strings", t => {
   t.deepEqual(formatter.format("1111222233334444"), {
     errors: [],
-    formatted: "1111-2222-3333-4444",
+    formatted: "1111 2222 3333 4444",
     parsed: "1111222233334444",
     valid: true
   });
@@ -67,7 +67,7 @@ test("handles errors", t => {
 test("is valid AMEX card starting with 34", t => {
   t.deepEqual(formatter.format("3411 111111 11111"), {
     errors: [],
-    formatted: "3411-111111-11111",
+    formatted: "3411 111111 11111",
     parsed: "341111111111111",
     valid: true
   });
@@ -76,7 +76,7 @@ test("is valid AMEX card starting with 34", t => {
 test("is valid AMEX card starting with 37", t => {
   t.deepEqual(formatter.format("3711 111111 11111"), {
     errors: [],
-    formatted: "3711-111111-11111",
+    formatted: "3711 111111 11111",
     parsed: "371111111111111",
     valid: true
   });
