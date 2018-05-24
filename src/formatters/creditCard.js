@@ -25,9 +25,6 @@ const CreditCardFormatter = {
           errors.push("FormFormatters.otherCreditCardInvalid");
         }
       }
-      
-      
-      
     }
 
     return({
