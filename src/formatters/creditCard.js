@@ -8,7 +8,7 @@ const CreditCardFormatter = {
       // remove all non-digits
       parsed = parsed.replace(/\D/g, "");
       // AMEX CHECK - if first two numbers are 34 or 37
-      if (/^3[47]/.test(parsed)) {
+      if(/^3[47]/.test(parsed)) {
         formatted = parsed.replace(/^(\d{4})(\d{6})(\d{5})$/, "$1 $2 $3");
         if(parsed.length !== 15) {
           valid = false;
