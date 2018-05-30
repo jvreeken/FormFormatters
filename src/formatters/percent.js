@@ -1,11 +1,11 @@
 import numeral from "numeral";
-import StringFormatter from "./string";
+import StrFormatter from "./string";
 import { merge, isEmpty, trim } from "lodash";
 
 const PercentFormatter = {
   format(value, options = {}) {
     options = merge({}, {format: "decimal"}, options);
-    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
 
     if(!isEmpty(parsed)) {
       let numObj = numeral(trim(parsed.replace(/[$\s,%]/g, "")));

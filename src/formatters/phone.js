@@ -1,8 +1,8 @@
-import StringFormatter from "./string";
+import StrFormatter from "./string";
 
 const PhoneFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
 
     if(valid && parsed.length > 0) {
       // remove all non-digits

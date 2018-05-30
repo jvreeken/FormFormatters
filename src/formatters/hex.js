@@ -1,8 +1,8 @@
-import StringFormatter from "./string";
+import StrFormatter from "./string";
 
 const HexFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
 
     parsed = parsed.toUpperCase();
     formatted = formatted.toUpperCase();

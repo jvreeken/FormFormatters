@@ -1,8 +1,8 @@
-import StringFormatter from "./string";
+import StrFormatter from "./string";
 
 const EmailFormatter = {
   format(value, options = {}) {
-    let{valid, parsed, formatted, errors} = StringFormatter.format(value, options);
+    let{valid, parsed, formatted, errors} = StrFormatter.format(value, options);
 
     parsed = parsed.toLowerCase();
     formatted = formatted.toLowerCase();
