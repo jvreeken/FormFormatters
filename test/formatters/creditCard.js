@@ -30,7 +30,7 @@ test("does not return an error if not required", t => {
 
 test("converts number", t => {
   t.deepEqual(formatter.format(23), {
-    errors: ["FormFormatters.otherCreditCardInvalid"],
+    errors: ["FormFormatters.creditCardInvalid"],
     formatted: 23,
     parsed: 23,
     valid: false
@@ -55,9 +55,18 @@ test("formats strings", t => {
   });
 });
 
+test("formats strings with spaces", t => {
+  t.deepEqual(formatter.format("1111 2222 3333 4444"), {
+    errors: [],
+    formatted: "1111 2222 3333 4444",
+    parsed: "1111222233334444",
+    valid: true
+  });
+});
+
 test("handles errors", t => {
   t.deepEqual(formatter.format("11122333"), {
-    errors: ["FormFormatters.otherCreditCardInvalid"],
+    errors: ["FormFormatters.creditCardInvalid"],
     formatted: "11122333",
     parsed: "11122333",
     valid: false
